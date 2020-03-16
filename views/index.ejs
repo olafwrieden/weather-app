@@ -23,11 +23,14 @@
           />
           <input type="submit" class="ghost-button" value="Get Weather" />
         </form>
+        <div>
         <% if(weather !== null){ %>
+          <img class="weather-icon" src="http://openweathermap.org/img/w/<%= icon %>.png" alt="weather icon" title="weather icon">
         <p><%= weather %></p>
         <% } %> <% if(error !== null){ %>
         <p><%= error %></p>
         <% } %>
+        </div>
       </fieldset>
     </div>
   </body>
