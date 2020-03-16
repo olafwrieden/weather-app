@@ -7,7 +7,8 @@ const app = express();
 const apiKey = process.env.API_KEY;
 const weather = {
   weather: null,
-  error: null
+  error: null,
+  icon: null
 };
 
 let timestamp;
@@ -31,6 +32,7 @@ const requestWeather = city => {
       } else {
         weather.weather = `It's ${weatherResponse.main.temp} degrees in ${city}.`;
         weather.error = null;
+        weather.icon = weatherResponse.weather[0].icon;
         console.log(`${timestamp} - ${city} - ${body}`);
         resolve();
       }
