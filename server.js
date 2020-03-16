@@ -43,6 +43,7 @@ const requestWeather = city => {
 const clearWeather = () => {
   weather.weather = null;
   weather.error = null;
+  weather.icon = null;
 };
 
 app.use(express.static("public"));
