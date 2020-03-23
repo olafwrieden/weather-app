@@ -106,10 +106,10 @@ app.post("/", async (req, res) => {
 });
 
 // Start Server
-app.listen(PORT, () => {
+var server = app.listen(PORT, () => {
   console.log("--------------------------");
   console.log(`Weather App: on port ${PORT}!`);
   console.log("--------------------------");
 });
 
-module.exports = { getWeather };
+module.exports = { getWeather, server };
