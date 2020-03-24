@@ -52,7 +52,7 @@ const getWeather = city => {
         !weatherData.main.temp ||
         !weatherData.weather[0].icon
       ) {
-        reject("Data error, please try again.");
+        resolve(JSON.stringify("Data error, please try again."));
       } else {
         resolve(body);
       }
