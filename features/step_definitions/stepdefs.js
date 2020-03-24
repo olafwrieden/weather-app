@@ -1,10 +1,9 @@
 const chai = require("chai");
 const expect = chai.expect;
-const server = require("../../server").server;
-const getWeather = require("../../server").getWeather;
+const {server, getWeather } = require("../../server");
 const { Given, When, Then, After } = require("cucumber");
 
-// TEST
+// TEST SCENARIO 1
 Given("my city is Auckland", function () {
   this.city = "Auckland";
 });
@@ -34,6 +33,7 @@ Then('the weather should contain temperature and timezone', function () {
     .to.be.a("number")
 });
 
+// TEST SCENARIO 2
 Given("my city is AEIOU", function () {
   this.city = "AEIOU";
 });
