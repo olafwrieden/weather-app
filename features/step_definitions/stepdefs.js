@@ -1,7 +1,12 @@
 const chai = require("chai");
 const expect = chai.expect;
-const {server, getWeather } = require("../../server");
+const { server, getWeather } = require("../../server");
 const { Given, When, Then, After } = require("cucumber");
+
+// STOP API SERVER
+After(function () {
+  server.close();
+});
 
 // TEST SCENARIO 1
 Given("my city is Auckland", function () {
@@ -42,9 +47,4 @@ Then('I will be told about the error', function () {
   expect(this.actualAnswer)
     .to.be.a("string")
     .to.equal("Data error, please try again.")
-});
-
-// STOP API SERVER
-After(function () {
-  server.close();
 });
