@@ -52,7 +52,7 @@ const getWeather = city => {
         !weatherData.main.temp ||
         !weatherData.weather[0].icon
       ) {
-        reject("Data error, please try again.");
+        resolve(JSON.stringify("Data error, please try again."));
       } else {
         resolve(body);
       }
@@ -106,10 +106,10 @@ app.post("/", async (req, res) => {
 });
 
 // Start Server
-app.listen(PORT, () => {
+var server = app.listen(PORT, () => {
   console.log("--------------------------");
   console.log(`Weather App: on port ${PORT}!`);
   console.log("--------------------------");
 });
 
-module.exports = { getWeather };
+module.exports = { getWeather, server };
