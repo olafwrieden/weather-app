@@ -1,4 +1,6 @@
-require("dotenv-safe").config();
+require('dotenv-safe').config({
+  allowEmptyValues: true
+});
 const request = require("request");
 const express = require("express");
 const helmet = require("helmet");
