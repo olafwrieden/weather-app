@@ -8,7 +8,6 @@ after(() => {
 });
 
 // Testing
-
 describe("Get Weather Data", () => {
   it("should return Auckland data", async function() {
     let weather = JSON.parse(await getWeather("Auckland"));
