@@ -18,3 +18,11 @@ $ npm run dev
 // Now open your browser and visit: localhost:3000 (or port number defined in .env)
 ```
 
+### In Production
+
+Wouldn't it be nice if the page were to refresh for instant feedbacl whenever you have saved a code change? Well, that's where a package called `nodemon` comes in. In *development* , start the application using:
+
+```javascript
+$ npm start
+// Now open your browser and visit: localhost:3000 (or port number defined in .env)
+```
