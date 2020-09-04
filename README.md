@@ -11,7 +11,7 @@ The source code is adapted from [this repo](https://github.com/bmorelli25/simple
 
 ### In Development
 
-Wouldn't it be nice if the page were to refresh for instant feedbacl whenever you have saved a code change? Well, that's where a package called `nodemon` comes in. In *development* , start the application using:
+Wouldn't it be nice if the page were to refresh for instant feedback whenever you have saved a code change? Well, that's where a package called `nodemon` comes in. In *development* , start the application using:
 
 ```javascript
 $ npm run dev
